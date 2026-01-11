@@ -1,78 +1,42 @@
-<nav>
-  <a href="index.html">🏠 Bosh sahifa</a>
-  <a href="asosiy.html">📘 Asosiy qism</a>
-  <a href="yakuniy.html">📗 Yakuniy qism</a>
-</nav>
-
-<style>
-  nav {
-    background: #1b5e20;
-    padding: 12px;
-    text-align: center;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  nav a:hover {
-    color: #ffeb3b;
-  }
-</style>
 <!DOCTYPE html>
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>III. Yakuniy qism</title>
+  <title>III. Yakuniy qism – Oligofrenopedagogning shaxsiy kompetentlik modeli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      padding: 20px;
-    }
-    header {
-      background: #004d40;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 22px;
-    }
-    main {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-top: 20px;
-      line-height: 1.6;
-    }
-    h2 {
-      color: #00695c;
-    }
-    h3 {
-      color: #00796b;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    a {
-      display: inline-block;
-      margin-top: 25px;
-      text-decoration: none;
-      color: white;
-      background: #007bff;
-      padding: 10px 18px;
-      border-radius: 8px;
-    }
-    a:hover {
-      background: #0056b3;
-    }
+    body { font-family:'Inter', sans-serif; margin:0; padding:0; background:#f5f7fa; color:#1f2937; }
+    nav { background:#1b5e20; padding:12px; text-align:center; }
+    nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; transition:0.3s; }
+    nav a:hover { color:#ffeb3b; }
+
+    header { background:#004d40; color:white; padding:15px; text-align:center; font-size:22px; }
+    main { background:white; padding:25px; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.1); margin:20px auto; max-width:700px; line-height:1.6; }
+    h2 { color:#00695c; margin-top:20px; }
+    h3 { color:#00796b; }
+    ul, ol { margin-left:20px; }
+    a.button { display:inline-block; margin-top:15px; text-decoration:none; color:white; background:#007bff; padding:10px 18px; border-radius:8px; transition:0.3s; }
+    a.button:hover { background:#0056b3; }
+
+    /* PDF ro'yxati uchun */
+    .chapters { list-style:none; padding:0; margin-top:20px; }
+    .chapters li { margin-bottom:15px; }
+    .chapters a.pdf-toggle { display:flex; justify-content:space-between; align-items:center; padding:12px 18px; text-decoration:none; border-radius:8px; background:#00796b; color:white; font-weight:600; cursor:pointer; transition:0.3s; }
+    .chapters a.pdf-toggle:hover { background:#004d40; transform:scale(1.02); }
+    .chapters ul.pdf-list { display:none; list-style:none; padding-left:20px; margin-top:10px; }
+    .chapters ul.pdf-list li { margin-bottom:8px; }
+    .chapters ul.pdf-list li a { color:#1f2937; text-decoration:underline; font-weight:500; }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">🏠 Bosh sahifa</a>
+    <a href="asosiy.html">📘 Asosiy qism</a>
+    <a href="yakuniy.html">📗 Yakuniy qism</a>
+  </nav>
+
   <header>
     III. Yakuniy qism
   </header>
@@ -92,19 +56,51 @@
 
     <h2>3. Mustaqil ishlar va amaliy topshiriqlar</h2>
     <ul>
-      <li>1. O‘z kasbiy kompetentligingizni tahlil qiling va rivojlanish rejasini tuzing.</li>
-      <li>2. Oligofrenopedagogik faoliyatda muloqot usullarini kuzatish natijalarini yozma shaklda taqdim eting.</li>
-      <li>3. Innovatsion metod asosida dars loyihasini ishlab chiqing.</li>
+      <li>O‘z kasbiy kompetentligingizni tahlil qiling va rivojlanish rejasini tuzing.</li>
+      <li>Oligofrenopedagogik faoliyatda muloqot usullarini kuzatish natijalarini yozma shaklda taqdim eting.</li>
+      <li>Innovatsion metod asosida dars loyihasini ishlab chiqing.</li>
     </ul>
 
-    <h2>4. Adabiyotlar ro‘yxati</h2>
-    <ol>
-      <li>G‘.G‘. Yuldasheva. Maxsus pedagogika. – Toshkent: TDPU nashriyoti, 2021.</li>
-      <li>N. Rasulova. Oligofrenopedagogik faoliyatning asoslari. – Toshkent, 2022.</li>
-      <li>Sh. To‘laganova. Maxsus ta’lim metodikasi. – Toshkent, 2020.</li>
-    </ol>
+    <h2>4. PDF fayllar – Batafsil</h2>
+    <ul class="chapters">
+      <li>
+        <a class="pdf-toggle" onclick="togglePdf('test')">📄 TEST – Batafsil</a>
+        <ul id="test" class="pdf-list">
+          <li><a href="pdf/TEST VA JAVOBLARI.pdf" target="_blank">TEST PDF</a></li>
+        </ul>
+      </li>
 
-    <a href="index.html">⬅️ Bosh sahifaga qaytish</a>
+      <li>
+        <a class="pdf-toggle" onclick="togglePdf('glossary')">📚 GLOSSARIY – Batafsil</a>
+        <ul id="glossary" class="pdf-list">
+          <li><a href="pdf/GLOSSARIY.pdf" target="_blank">GLOSSARIY PDF</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a class="pdf-toggle" onclick="togglePdf('muammo')">⚠️ MUAMMOLI VAZIYATLAR – Batafsil</a>
+        <ul id="muammo" class="pdf-list">
+          <li><a href="pdf/MUAMMOLI VAZIYATLAR VA YECHIM.pdf" target="_blank">Muammoli vaziyat PDF</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a class="pdf-toggle" onclick="togglePdf('xulosa')">📝 XULOSA – Batafsil</a>
+        <ul id="xulosa" class="pdf-list">
+          <li><a href="pdf/XULOSA.pdf" target="_blank">XULOSA PDF</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <a class="button" href="index.html">⬅️ Bosh sahifaga qaytish</a>
   </main>
+
+  <script>
+    function togglePdf(id){
+      const list = document.getElementById(id);
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
