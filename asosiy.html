@@ -80,7 +80,7 @@
     .chapters a {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: space-between;
       gap: 15px;
       padding: 20px 25px;
       color: white;
@@ -92,7 +92,12 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    /* Rang-barang tugmalar: har bir bob o'z rangiga ega */
+    .chapters a:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+
+    /* Rang-barang tugmalar */
     .bob1 { background-color: #ff6b6b; }  
     .bob2 { background-color: #f59e0b; }  
     .bob3 { background-color: #10b981; }  
@@ -102,27 +107,24 @@
     .bob7 { background-color: #f472b6; }  
     .bob8 { background-color: #facc15; color: #1f2937; } 
 
-    .chapters a::before {
-      content: "📘"; 
+    .chapters a span::before {
       font-size: 32px;
+      margin-right: 8px;
     }
 
-    .bob1::before { content: "📖"; }
-    .bob2::before { content: "🧩"; }
-    .bob3::before { content: "🎓"; }
-    .bob4::before { content: "💬"; }
-    .bob5::before { content: "⚖️"; }
-    .bob6::before { content: "🪞"; }
-    .bob7::before { content: "💡"; }
-    .bob8::before { content: "🌐"; }
-
-    .chapters a:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-    }
+    /* Emoji */
+    .bob1 span::before { content: "📖"; }
+    .bob2 span::before { content: "🧩"; }
+    .bob3 span::before { content: "🎓"; }
+    .bob4 span::before { content: "💬"; }
+    .bob5 span::before { content: "⚖️"; }
+    .bob6 span::before { content: "🪞"; }
+    .bob7 span::before { content: "💡"; }
+    .bob8 span::before { content: "🌐"; }
 
     .pdf-list {
-      margin-top: 15px;
+      display: none;
+      margin-top: 10px;
       list-style: none;
       padding: 0 20px;
       text-align: left;
@@ -156,11 +158,15 @@
 
   <div class="container">
     <h2>II. Asosiy qism</h2>
-    <p>Bobni tanlang va PDF fayllarni oching:</p>
+    <p>Bobni tanlang va “Batafsil” tugmasini bosing:</p>
 
     <ul class="chapters">
+      <!-- Bob 1 -->
       <li>
-        <a href="#bob1" class="bob1">1-bob. Oligofrenopedagogik faoliyatning nazariy asoslari</a>
+        <a href="javascript:void(0)" class="bob1" onclick="togglePdf('bob1')">
+          <span>1-bob. Oligofrenopedagogik faoliyatning nazariy asoslari</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob1">
           <li><a href="pdf/1.1.pdf" target="_blank">1.1-mavzu</a></li>
           <li><a href="pdf/1.2.pdf" target="_blank">1.2-mavzu</a></li>
@@ -169,8 +175,13 @@
           <li><a href="pdf/1.5.pdf" target="_blank">1.5-mavzu</a></li>
         </ul>
       </li>
+
+      <!-- Bob 2 -->
       <li>
-        <a href="#bob2" class="bob2">2-bob. Oligofrenopedagog shaxsining kompetentlik modeli</a>
+        <a href="javascript:void(0)" class="bob2" onclick="togglePdf('bob2')">
+          <span>2-bob. Oligofrenopedagog shaxsining kompetentlik modeli</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob2">
           <li><a href="pdf/2.1.pdf" target="_blank">2.1-mavzu</a></li>
           <li><a href="pdf/2.2.pdf" target="_blank">2.2-mavzu</a></li>
@@ -179,8 +190,13 @@
           <li><a href="pdf/2.5.pdf" target="_blank">2.5-mavzu</a></li>
         </ul>
       </li>
+
+      <!-- Bob 3 -->
       <li>
-        <a href="#bob3" class="bob3">3-bob. Kasbiy-pedagogik kompetentlik</a>
+        <a href="javascript:void(0)" class="bob3" onclick="togglePdf('bob3')">
+          <span>3-bob. Kasbiy-pedagogik kompetentlik</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob3">
           <li><a href="pdf/3.1.pdf" target="_blank">3.1-mavzu</a></li>
           <li><a href="pdf/3.2.pdf" target="_blank">3.2-mavzu</a></li>
@@ -189,8 +205,13 @@
           <li><a href="pdf/3.5.pdf" target="_blank">3.5-mavzu</a></li>
         </ul>
       </li>
+
+      <!-- Bob 4 -->
       <li>
-        <a href="#bob4" class="bob4">4-bob. Kommunikativ kompetentlik</a>
+        <a href="javascript:void(0)" class="bob4" onclick="togglePdf('bob4')">
+          <span>4-bob. Kommunikativ kompetentlik</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob4">
           <li><a href="pdf/4.1.pdf" target="_blank">4.1-mavzu</a></li>
           <li><a href="pdf/4.2.pdf" target="_blank">4.2-mavzu</a></li>
@@ -199,8 +220,13 @@
           <li><a href="pdf/4.5.pdf" target="_blank">4.5-mavzu</a></li>
         </ul>
       </li>
+
+      <!-- Bob 5 -->
       <li>
-        <a href="#bob5" class="bob5">5-bob. Shaxsiy va axloqiy kompetentlik</a>
+        <a href="javascript:void(0)" class="bob5" onclick="togglePdf('bob5')">
+          <span>5-bob. Shaxsiy va axloqiy kompetentlik</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob5">
           <li><a href="pdf/5.1.pdf" target="_blank">5.1-mavzu</a></li>
           <li><a href="pdf/5.2.pdf" target="_blank">5.2-mavzu</a></li>
@@ -209,8 +235,13 @@
           <li><a href="pdf/5.5.pdf" target="_blank">5.5-mavzu</a></li>
         </ul>
       </li>
+
+      <!-- Bob 6 -->
       <li>
-        <a href="#bob6" class="bob6">6-bob. Refleksiv kompetentlik</a>
+        <a href="javascript:void(0)" class="bob6" onclick="togglePdf('bob6')">
+          <span>6-bob. Refleksiv kompetentlik</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob6">
           <li><a href="pdf/6.1.pdf" target="_blank">6.1-mavzu</a></li>
           <li><a href="pdf/6.2.pdf" target="_blank">6.2-mavzu</a></li>
@@ -219,8 +250,13 @@
           <li><a href="pdf/6.5.pdf" target="_blank">6.5-mavzu</a></li>
         </ul>
       </li>
+
+      <!-- Bob 7 -->
       <li>
-        <a href="#bob7" class="bob7">7-bob. Ijodiy va innovatsion kompetentlik</a>
+        <a href="javascript:void(0)" class="bob7" onclick="togglePdf('bob7')">
+          <span>7-bob. Ijodiy va innovatsion kompetentlik</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob7">
           <li><a href="pdf/7.1.pdf" target="_blank">7.1-mavzu</a></li>
           <li><a href="pdf/7.2.pdf" target="_blank">7.2-mavzu</a></li>
@@ -229,8 +265,13 @@
           <li><a href="pdf/7.5.pdf" target="_blank">7.5-mavzu</a></li>
         </ul>
       </li>
+
+      <!-- Bob 8 -->
       <li>
-        <a href="#bob8" class="bob8">8-bob. Ijtimoiy kompetentlik</a>
+        <a href="javascript:void(0)" class="bob8" onclick="togglePdf('bob8')">
+          <span>8-bob. Ijtimoiy kompetentlik</span>
+          Batafsil
+        </a>
         <ul class="pdf-list" id="bob8">
           <li><a href="pdf/8.1.pdf" target="_blank">8.1-mavzu</a></li>
           <li><a href="pdf/8.2.pdf" target="_blank">8.2-mavzu</a></li>
@@ -241,6 +282,17 @@
       </li>
     </ul>
   </div>
+
+  <script>
+    function togglePdf(id){
+      const list = document.getElementById(id);
+      if(list.style.display === "block"){
+        list.style.display = "none";
+      } else {
+        list.style.display = "block";
+      }
+    }
+  </script>
 
 </body>
 </html>
