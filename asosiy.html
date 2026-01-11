@@ -47,7 +47,7 @@
     }
 
     .container {
-      max-width: 500px; /* bir ustun uchun torroq container */
+      max-width: 700px;
       width: 100%;
       margin: 60px auto;
       text-align: center;
@@ -68,9 +68,8 @@
       list-style: none;
       padding: 0;
       display: flex;
-      flex-direction: column; /* vertikal ustun */
+      flex-direction: column;
       gap: 20px;
-      justify-items: center;
       align-items: center;
     }
 
@@ -89,27 +88,25 @@
       border-radius: 16px;
       font-size: 20px;
       font-weight: 600;
-      text-align: left;
       transition: 0.3s;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     /* Rang-barang tugmalar: har bir bob o'z rangiga ega */
-    .bob1 { background-color: #ff6b6b; }      /* qizil - diqqatni jalb qiladi */
-    .bob2 { background-color: #f59e0b; }      /* to‘q sariq - ijobiy energiya */
-    .bob3 { background-color: #10b981; }      /* yashil - ishonch va rivojlanish */
-    .bob4 { background-color: #3b82f6; }      /* ko‘k - bilim va fokus */
-    .bob5 { background-color: #8b5cf6; }      /* binafsha - ijodiy fikrlash */
-    .bob6 { background-color: #14b8a6; }      /* turkuaz - refleksiya va fikr */
-    .bob7 { background-color: #f472b6; }      /* pushti - motivatsiya va yangilik */
-    .bob8 { background-color: #facc15; color: #1f2937; } /* sariq - ijtimoiy faollik */
+    .bob1 { background-color: #ff6b6b; }  
+    .bob2 { background-color: #f59e0b; }  
+    .bob3 { background-color: #10b981; }  
+    .bob4 { background-color: #3b82f6; }  
+    .bob5 { background-color: #8b5cf6; }  
+    .bob6 { background-color: #14b8a6; }  
+    .bob7 { background-color: #f472b6; }  
+    .bob8 { background-color: #facc15; color: #1f2937; } 
 
     .chapters a::before {
-      content: "📘"; /* default belgi */
+      content: "📘"; 
       font-size: 32px;
     }
 
-    /* Har bir bobga o'ziga xos emoji */
     .bob1::before { content: "📖"; }
     .bob2::before { content: "🧩"; }
     .bob3::before { content: "🎓"; }
@@ -122,6 +119,23 @@
     .chapters a:hover {
       transform: translateY(-3px) scale(1.05);
       box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+
+    .pdf-list {
+      margin-top: 15px;
+      list-style: none;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    .pdf-list li {
+      margin-bottom: 10px;
+    }
+
+    .pdf-list a {
+      color: #1f2937;
+      text-decoration: underline;
+      font-weight: 500;
     }
 
     @media (max-width: 600px) {
@@ -142,17 +156,89 @@
 
   <div class="container">
     <h2>II. Asosiy qism</h2>
-    <p>Bobni tanlang:</p>
+    <p>Bobni tanlang va PDF fayllarni oching:</p>
 
     <ul class="chapters">
-      <li><a href="bob1.html" class="bob1">1-bob. Oligofrenopedagogik faoliyatning nazariy asoslari</a></li>
-      <li><a href="bob2.html" class="bob2">2-bob. Oligofrenopedagog shaxsining kompetentlik modeli</a></li>
-      <li><a href="bob3.html" class="bob3">3-bob. Kasbiy-pedagogik kompetentlik</a></li>
-      <li><a href="bob4.html" class="bob4">4-bob. Kommunikativ kompetentlik</a></li>
-      <li><a href="bob5.html" class="bob5">5-bob. Shaxsiy va axloqiy kompetentlik</a></li>
-      <li><a href="bob6.html" class="bob6">6-bob. Refleksiv kompetentlik</a></li>
-      <li><a href="bob7.html" class="bob7">7-bob. Ijodiy va innovatsion kompetentlik</a></li>
-      <li><a href="bob8.html" class="bob8">8-bob. Ijtimoiy kompetentlik</a></li>
+      <li>
+        <a href="#bob1" class="bob1">1-bob. Oligofrenopedagogik faoliyatning nazariy asoslari</a>
+        <ul class="pdf-list" id="bob1">
+          <li><a href="pdf/1.1.pdf" target="_blank">1.1-mavzu</a></li>
+          <li><a href="pdf/1.2.pdf" target="_blank">1.2-mavzu</a></li>
+          <li><a href="pdf/1.3.pdf" target="_blank">1.3-mavzu</a></li>
+          <li><a href="pdf/1.4.pdf" target="_blank">1.4-mavzu</a></li>
+          <li><a href="pdf/1.5.pdf" target="_blank">1.5-mavzu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bob2" class="bob2">2-bob. Oligofrenopedagog shaxsining kompetentlik modeli</a>
+        <ul class="pdf-list" id="bob2">
+          <li><a href="pdf/2.1.pdf" target="_blank">2.1-mavzu</a></li>
+          <li><a href="pdf/2.2.pdf" target="_blank">2.2-mavzu</a></li>
+          <li><a href="pdf/2.3.pdf" target="_blank">2.3-mavzu</a></li>
+          <li><a href="pdf/2.4.pdf" target="_blank">2.4-mavzu</a></li>
+          <li><a href="pdf/2.5.pdf" target="_blank">2.5-mavzu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bob3" class="bob3">3-bob. Kasbiy-pedagogik kompetentlik</a>
+        <ul class="pdf-list" id="bob3">
+          <li><a href="pdf/3.1.pdf" target="_blank">3.1-mavzu</a></li>
+          <li><a href="pdf/3.2.pdf" target="_blank">3.2-mavzu</a></li>
+          <li><a href="pdf/3.3.pdf" target="_blank">3.3-mavzu</a></li>
+          <li><a href="pdf/3.4.pdf" target="_blank">3.4-mavzu</a></li>
+          <li><a href="pdf/3.5.pdf" target="_blank">3.5-mavzu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bob4" class="bob4">4-bob. Kommunikativ kompetentlik</a>
+        <ul class="pdf-list" id="bob4">
+          <li><a href="pdf/4.1.pdf" target="_blank">4.1-mavzu</a></li>
+          <li><a href="pdf/4.2.pdf" target="_blank">4.2-mavzu</a></li>
+          <li><a href="pdf/4.3.pdf" target="_blank">4.3-mavzu</a></li>
+          <li><a href="pdf/4.4.pdf" target="_blank">4.4-mavzu</a></li>
+          <li><a href="pdf/4.5.pdf" target="_blank">4.5-mavzu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bob5" class="bob5">5-bob. Shaxsiy va axloqiy kompetentlik</a>
+        <ul class="pdf-list" id="bob5">
+          <li><a href="pdf/5.1.pdf" target="_blank">5.1-mavzu</a></li>
+          <li><a href="pdf/5.2.pdf" target="_blank">5.2-mavzu</a></li>
+          <li><a href="pdf/5.3.pdf" target="_blank">5.3-mavzu</a></li>
+          <li><a href="pdf/5.4.pdf" target="_blank">5.4-mavzu</a></li>
+          <li><a href="pdf/5.5.pdf" target="_blank">5.5-mavzu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bob6" class="bob6">6-bob. Refleksiv kompetentlik</a>
+        <ul class="pdf-list" id="bob6">
+          <li><a href="pdf/6.1.pdf" target="_blank">6.1-mavzu</a></li>
+          <li><a href="pdf/6.2.pdf" target="_blank">6.2-mavzu</a></li>
+          <li><a href="pdf/6.3.pdf" target="_blank">6.3-mavzu</a></li>
+          <li><a href="pdf/6.4.pdf" target="_blank">6.4-mavzu</a></li>
+          <li><a href="pdf/6.5.pdf" target="_blank">6.5-mavzu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bob7" class="bob7">7-bob. Ijodiy va innovatsion kompetentlik</a>
+        <ul class="pdf-list" id="bob7">
+          <li><a href="pdf/7.1.pdf" target="_blank">7.1-mavzu</a></li>
+          <li><a href="pdf/7.2.pdf" target="_blank">7.2-mavzu</a></li>
+          <li><a href="pdf/7.3.pdf" target="_blank">7.3-mavzu</a></li>
+          <li><a href="pdf/7.4.pdf" target="_blank">7.4-mavzu</a></li>
+          <li><a href="pdf/7.5.pdf" target="_blank">7.5-mavzu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bob8" class="bob8">8-bob. Ijtimoiy kompetentlik</a>
+        <ul class="pdf-list" id="bob8">
+          <li><a href="pdf/8.1.pdf" target="_blank">8.1-mavzu</a></li>
+          <li><a href="pdf/8.2.pdf" target="_blank">8.2-mavzu</a></li>
+          <li><a href="pdf/8.3.pdf" target="_blank">8.3-mavzu</a></li>
+          <li><a href="pdf/8.4.pdf" target="_blank">8.4-mavzu</a></li>
+          <li><a href="pdf/8.5.pdf" target="_blank">8.5-mavzu</a></li>
+        </ul>
+      </li>
     </ul>
   </div>
 
